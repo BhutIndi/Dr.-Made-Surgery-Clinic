@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/sky_blue"
+    tools:context=".MainActivity">
+
+    <!-- Main background/panel -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/mainPanel"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/gradient_background"
+
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <!-- for a more responsive design -->
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/contentGuideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.37"/>
+
+        <!-- Page header -->
+        <!-- Logo icon -->
+        <ImageView
+            android:id="@+id/logoIcon"
+            android:layout_width="164dp"
+            android:layout_height="73dp"
+            android:layout_marginTop="5dp"
+            android:contentDescription="@string/logo_description"
+            android:src="@drawable/dr_made_white_logo_cropped"
+            android:scaleType="fitStart"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            />
+
+        <!-- Login button -->
+        <Button
+            android:id="@+id/loginButton"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:background="@drawable/bg_button_outline"
+            app:backgroundTint="@null"
+            android:text="@string/login_btn"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:layout_marginEnd="10dp"
+            android:paddingStart="18dp"
+            android:paddingEnd="18dp"
+            android:minHeight="0dp"
+            android:minWidth="0dp"
+            app:layout_constraintEnd_toStartOf="@+id/registerButton"
+            app:layout_constraintTop_toTopOf="@+id/logoIcon"
+            app:layout_constraintBottom_toBottomOf="@+id/logoIcon"
+
+            />
+
+        <!-- Register button -->
+        <Button
+            android:id="@+id/registerButton"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:background="@drawable/bg_button_outline"
+            app:backgroundTint="@null"
+            android:text="@string/register_btn"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:textSize="14sp"
+            android:minHeight="0dp"
+            android:minWidth="0dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/logoIcon"
+            app:layout_constraintBottom_toBottomOf="@+id/logoIcon"
+            android:paddingStart="18dp"
+            android:paddingEnd="18dp"
+            android:layout_marginEnd="15dp"
+            />
+
+
+        <!-- Online booking content section -->
+        <LinearLayout
+            android:id="@+id/booking_header"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/contentGuideline">
+
+            <!-- green dot -->
+            <View
+                android:layout_width="14dp"
+                android:layout_height="14dp"
+                android:background="@drawable/bg_green_dot"
+                android:layout_marginStart="15dp"
+                />
+
+            <!-- for the 24/7 text -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/tagline_info"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                android:layout_marginStart="10dp"
+                />
+
+        </LinearLayout>
+
+        <!-- Main Page Heading -->
+        <TextView
+            android:id="@+id/tagline"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/tagline"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:textSize="45sp"
+            android:lineSpacingExtra="0dp"
+            android:fontFamily="sans-serif"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/booking_header"
+            android:layout_marginTop="45dp"
+            android:autoSizeTextType="uniform"
+            android:autoSizeMaxTextSize="45sp"
+            android:autoSizeMinTextSize="34sp"
+            android:autoSizeStepGranularity="1sp"
+            android:layout_marginStart="15dp"
+            />
+
+        <!-- Description -->
+        <TextView
+            android:id="@+id/main_description"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/dr_made_description"
+            android:textColor="@color/gray"
+            android:textSize="18sp"
+            android:lineSpacingExtra="4dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tagline"
+            android:layout_marginTop="25dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
+            />
+
+        <!-- Book appointment button -->
+        <Button
+            android:id="@+id/onlineBooking"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:text="@string/book_appointment_btn"
+            android:textColor="@color/deep_blue"
+            android:textSize="17sp"
+            android:textStyle="bold"
+            android:textAllCaps="false"
+            android:backgroundTint="@color/white"
+            android:minHeight="0dp"
+            android:minWidth="0dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/main_description"
+            android:layout_marginTop="45dp"
+            android:padding="0dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
+            />
+
+        <!-- Get Started -->
+
+        <Button
+            android:id="@+id/getStartedButton"
+            android:layout_width="0dp"
+            android:layout_height="62dp"
+            android:text="@string/get_started_btn"
+            android:textColor="@color/white"
+            android:textSize="17sp"
+            android:textStyle="bold"
+            android:textAllCaps="false"
+            android:background="@drawable/bg_button_outline"
+            app:backgroundTint="@null"
+            android:minHeight="0dp"
+            android:minWidth="0dp"
+            android:padding="0dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/onlineBooking"
+            android:layout_marginTop="15dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
+            />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="background">#263F91</color> <!-- dark blue -->
+    <color name="primary_colour">#195B68</color> <!-- teal green -->
+    <color name="green">#00D9A5</color>
+    <color name="deep_blue">#173D91</color>
+    <color name="dark_blue">#263F91</color>
+    <color name="teal">#195B68</color>
+    <color name="background_register">#E5EDF4</color>
+    <color name="sky_blue">#DCE5EC</color>
+    <color name="gray">#C8C4C1</color>
+    <color name="dark_gray">#667085</color>
+    <color name="gray_icons">#999999</color>
+</resources>
