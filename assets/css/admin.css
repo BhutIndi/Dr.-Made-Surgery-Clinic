@@ -1,0 +1,372 @@
+/* =========================================================
+   BYTE SYSTEMS
+   SHARED ADMIN STYLES
+   ========================================================= */
+
+:root {
+
+    --sidebar: #10182b;
+    --sidebar-card: #293348;
+
+    --primary-blue: #2948b8;
+
+    --text-dark: #07152d;
+    --text-grey: #5e718c;
+    --text-light: #8b9db7;
+
+    --border: #e7ebf1;
+    --background: #f8fafc;
+    --white: #ffffff;
+
+    --green: #006d52;
+    --red: #d71919;
+
+}
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+html,
+body {
+    min-height: 100%;
+}
+
+
+body {
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    background: var(--background);
+
+    color: var(--text-dark);
+
+}
+
+
+/* =========================================================
+   MAIN DASHBOARD LAYOUT
+   ========================================================= */
+
+.dashboard {
+
+    min-height: 100vh;
+
+    display: flex;
+
+}
+
+
+/* =========================================================
+   SIDEBAR
+   ========================================================= */
+
+.sidebar {
+
+    position: fixed;
+
+    top: 0;
+    left: 0;
+    bottom: 0;
+
+    width: 298px;
+
+    background: #10182b;
+
+    color: white;
+
+    display: flex;
+
+    flex-direction: column;
+
+    z-index: 100;
+
+}
+
+
+/* =========================================================
+   LOGO
+   ========================================================= */
+
+.logo-section {
+
+    height: 66px;
+
+    padding-left: 24px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 11px;
+
+}
+
+
+.logo-icon {
+
+    width: 40px;
+    height: 40px;
+
+    border-radius: 12px;
+
+    background: #08775a;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+}
+
+
+.logo-icon svg {
+
+    width: 23px;
+    height: 23px;
+
+    fill: white;
+
+}
+
+
+.logo-text h2 {
+
+    font-size: 17px;
+
+    font-weight: 700;
+
+    line-height: 1;
+
+}
+
+
+.logo-text span {
+
+    display: block;
+
+    margin-top: 5px;
+
+    color: #9aa9be;
+
+    font-size: 10px;
+
+    letter-spacing: 0.8px;
+
+}
+
+
+/* =========================================================
+   ADMIN USER
+   ========================================================= */
+
+.admin-user {
+
+    height: 75px;
+
+    margin: 0 25px;
+
+    padding: 0 15px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    background: #293348;
+
+    border-radius: 17px;
+
+}
+
+
+.admin-avatar {
+
+    width: 44px;
+    height: 44px;
+
+    border-radius: 50%;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    background: #087b5d;
+
+    color: white;
+
+    font-size: 17px;
+
+    font-weight: 600;
+
+}
+
+
+.admin-details {
+
+    display: flex;
+
+    flex-direction: column;
+
+}
+
+
+.admin-details strong {
+
+    font-size: 15px;
+
+}
+
+
+.admin-details span {
+
+    margin-top: 5px;
+
+    color: #9aa9be;
+
+    font-size: 12px;
+
+}
+
+
+/* =========================================================
+   NAVIGATION
+   ========================================================= */
+
+.sidebar-navigation {
+
+    margin-top: 24px;
+
+    padding: 25px 20px 0;
+
+    border-top: 1px solid rgba(255,255,255,0.10);
+
+}
+
+
+.navigation-item,
+.sign-out {
+
+    height: 50px;
+
+    padding: 0 15px;
+
+    margin-bottom: 7px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    border-radius: 11px;
+
+    color: #9baac0;
+
+    text-decoration: none;
+
+    font-size: 16px;
+
+    transition: 0.2s ease;
+
+}
+
+
+.navigation-item:hover,
+.sign-out:hover {
+
+    color: white;
+
+    background: rgba(255,255,255,0.06);
+
+}
+
+
+.navigation-item.active {
+
+    background: #2948b8;
+
+    color: white;
+
+    font-weight: 700;
+
+}
+
+
+.navigation-icon {
+
+    width: 20px;
+    height: 20px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+}
+
+
+.navigation-icon svg {
+
+    width: 20px;
+    height: 20px;
+
+    fill: none;
+
+    stroke: currentColor;
+
+    stroke-width: 1.8;
+
+    stroke-linecap: round;
+
+    stroke-linejoin: round;
+
+}
+
+
+/* =========================================================
+   SIGN OUT
+   ========================================================= */
+
+.sidebar-bottom {
+
+    margin-top: auto;
+
+    padding: 0 20px 18px;
+
+    border-top: 1px solid rgba(255,255,255,0.10);
+
+}
+
+
+.sign-out {
+
+    margin-top: 16px;
+
+    margin-bottom: 0;
+
+}
+
+
+/* =========================================================
+   MAIN CONTENT
+   ========================================================= */
+
+.main-content {
+
+    width: calc(100% - 298px);
+
+    margin-left: 298px;
+
+    min-height: 100vh;
+
+}
